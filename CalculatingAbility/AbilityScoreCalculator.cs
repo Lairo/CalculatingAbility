@@ -19,7 +19,7 @@ namespace CalculatingAbility
             // Divide the roll result by the DividedBy field
             double divided = RollResult / DivideBy;
 
-            // Add AddAmount to the result of that division
+            // Add AddAmount to the result of that division 
             int added = AddAmount + (int)divided;
 
             // If the result is too small, use Minimum

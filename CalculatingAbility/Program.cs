@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculatingAbility
 {
@@ -26,12 +22,22 @@ namespace CalculatingAbility
 
         private static double ReadDouble(double divideBy, string v)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{v} [{divideBy}]: ");
+            string prompt = Console.ReadLine();
+            if (double.TryParse(prompt, out double value))
+                return value;
+            else
+                return divideBy;
         }
 
         private static int ReadInt(int rollResult, string v)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{v} [{rollResult}]: ");
+            string prompt = Console.ReadLine();
+            if (int.TryParse(prompt, out int value))
+                return value;
+            else
+                return rollResult;
         }
     }
 }
