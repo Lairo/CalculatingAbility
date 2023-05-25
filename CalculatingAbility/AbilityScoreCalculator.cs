@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CalculatingAbility
+﻿namespace CalculatingAbility
 {
     internal class AbilityScoreCalculator
     {
@@ -23,7 +17,7 @@ namespace CalculatingAbility
             int added = AddAmount + (int)divided;
 
             // If the result is too small, use Minimum
-            if (added < Minimum)            
+            if (added < Minimum)
                 Score = Minimum;
             else
                 Score = added;

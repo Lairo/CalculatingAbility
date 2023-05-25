@@ -22,22 +22,34 @@ namespace CalculatingAbility
 
         private static double ReadDouble(double divideBy, string v)
         {
-            Console.WriteLine($"{v} [{divideBy}]: ");
+            Console.Write($"{v} [{divideBy}]: ");
             string prompt = Console.ReadLine();
             if (double.TryParse(prompt, out double value))
+            {
+                Console.WriteLine($"\tusing new value {value}");
                 return value;
+            }
             else
+            {
+                Console.WriteLine($"\tusing the default value {divideBy}");
                 return divideBy;
+            }
         }
 
         private static int ReadInt(int rollResult, string v)
         {
-            Console.WriteLine($"{v} [{rollResult}]: ");
+            Console.Write($"{v} [{rollResult}]: ");
             string prompt = Console.ReadLine();
             if (int.TryParse(prompt, out int value))
+            {
+                Console.WriteLine($"\tusing new value {value}");
                 return value;
+            }
             else
+            {
+                Console.WriteLine($"\tusing the default value {rollResult}");
                 return rollResult;
+            }
         }
     }
 }
